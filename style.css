@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(255, 231, 253);
+}
+
+.form {
+    text-align: center;
+    padding: 3% 0 2% 0;
+}
+
+.input_search {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid rgb(165, 59, 156);
+}
+
+::placeholder {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 30px;
+}
+
+.search {
+    color: rgb(165, 59, 156);
+    margin-left: 5%;
+    font-size: 2em;
+}
+
+.container {
+    padding: 2%;
+}
+
+.definitions {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    border: solid rgb(165, 59, 156);
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+}
+
+.title {
+    padding: 1% 0 1% 0;
+    text-align: center;
+}
+
+.citations {
+    width: 100%;
+    background-color: red;
+    background-color: white;
+    border-radius: 5px;
+    border: solid rgb(165, 59, 156);
+    padding-bottom: 1%;
+}
+
+.expressions {
+    width: 90vw;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    border: solid rgb(165, 59, 156);
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+}
+
+.container2 {
+    width: 100vw;
+    margin: 0;
+}
+
+.synonymes {
+    width: 95vw;
+    background-color: pink;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    border: solid rgb(165, 59, 156);
+    margin-bottom: 2%;
+    padding-bottom: 1%;
+}
+
+.ul_synonymes {
+    display: inline-flex;
+}
+
+.li_synonymes {
+    margin-left: 2em;
+}
+
+.score {
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid rgb(165, 59, 156);
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 2%;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        display: flex;
+    }
+    .container2 {
+        display: flex;
+    }
+    .definitions {
+        width: 50%;
+    }
+    .citations {
+        width: 50%;
+        margin-left: 2%;
+    }
+    .title {
+        font-size: 2em;
+    }
+}
