@@ -39,20 +39,21 @@ $ssc = $data_scorescrabble;
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dictionnaire</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="form">
         <form action="" method="post">
             <input type="text" name="search" placeholder="Rechercher un mot" class="input_search" />
-            <input type="submit" value="OK" name="btn_search"><span class="search">cheval</span>
+            <input type="submit" value="OK" name="btn_search"><?php if (!empty($_POST['btn_search'])): ?><span class="search">cheval</span><?php endif ?>
         </form>
     </div>
 
- 
+    <?php if (!empty($_POST['btn_search'])): ?>
 
     <div class="container">
-        <div class="definitions">
+        <div class="definitions" data-aos="fade-right">
             <h5 class="title">Définitions</h5>
             <ul>
                 <li>dcrrvfgbb:gf blksgnfmlbnsgmlbl msglbksfk: gnb:kjfgkb nfgkjb nkfsnbkjs</li>
@@ -60,7 +61,7 @@ $ssc = $data_scorescrabble;
                 <li>ezvzver er erv zev ztb </li>
             </ul>
         </div>
-        <div class="citations">
+        <div class="citations" data-aos="fade-left">
             <h5 class="title">Citations</h5>
             <ul>
                 <li>dbdsfb</li>
@@ -71,7 +72,7 @@ $ssc = $data_scorescrabble;
             </ul>
         </div>
     </div>
-    <div class="expressions">
+    <div class="expressions" data-aos="fade-up" data-aos-duration="500">
     <h5 class="title">Expressions</h5>
        <ul>
            <li>fv fv fv fv </li>
@@ -81,7 +82,7 @@ $ssc = $data_scorescrabble;
            <li>fv fv fv fv </li>
        </ul>
     </div>
-    <div class="synonymes">
+    <div class="synonymes" data-aos="fade-up" data-aos-duration="1000">
         <h5 class="title">Synonymes</h5>
         <ul class="ul_synonymes">
            <li class="li_synonymes">fv fv fv fv </li>
@@ -91,9 +92,21 @@ $ssc = $data_scorescrabble;
            <li class="li_synonymes">fv fv fv fv </li>
        </ul>
     </div>
-    <div class="score">
-        <span>Score au scrabble : 14</span>
+
+    <div class="lienAPI">
+        <p>Utilisation de l'API <a href="https://www.dicolink.com/">Dicolink</a></p>
     </div>
+
+    <?php else :?>
+
+    <h1>else</h1>
+
+    <?php endif ?>
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

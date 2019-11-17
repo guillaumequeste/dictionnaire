@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
 * {
     margin: 0;
 }
@@ -26,10 +27,15 @@ body {
     line-height: 30px;
 }
 
+.btn_search {
+    height: 30px;
+}
+
 .search {
     color: rgb(165, 59, 156);
     margin-left: 5%;
     font-size: 2em;
+    font-family: 'Parisienne', cursive;
 }
 
 .container {
@@ -48,6 +54,7 @@ body {
 .title {
     padding: 1% 0 1% 0;
     text-align: center;
+    font-family: 'Parisienne', cursive;
 }
 
 .citations {
@@ -93,16 +100,10 @@ body {
     margin-left: 2em;
 }
 
-.score {
-    width: 300px;
-    height: 30px;
-    background-color: white;
-    border-radius: 5px;
-    border: solid rgb(165, 59, 156);
-    margin: auto;
-    text-align: center;
-    line-height: 30px;
+.lienAPI {
+    width: 95vw;
     margin-bottom: 2%;
+    text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
