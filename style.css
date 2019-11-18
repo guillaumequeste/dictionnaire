@@ -31,10 +31,6 @@ body {
     text-align: center;
 }
 
-.btn_search {
-    height: 30px;
-}
-
 .search {
     background-color: rgb(165, 59, 156);
     color: white;
