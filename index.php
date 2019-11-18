@@ -57,11 +57,13 @@ $ssc = $data_scorescrabble;
     <div class="form">
         <form action="" method="post">
             <input type="text" name="search" placeholder="Rechercher un mot" class="input_search" />
-            <input type="submit" value="OK" name="btn_search"><?php if (!empty($_POST['btn_search'])): ?><div class="search"><?= $_POST['search'] ?></div><?php endif ?>
+            <input type="submit" value="OK" name="btn_search"><?php if (!empty($_POST['search'])): ?><div class="search"><?= $_POST['search'] ?></div><?php endif ?>
         </form>
     </div>
 
-    <?php if (!empty($_POST['btn_search'])): ?>
+    <?php if (empty($_POST['search'])): ?>
+
+    <?php else: ?>
 
     <div class="container">
         <div class="definitions" data-aos="fade-right">
@@ -99,9 +101,6 @@ $ssc = $data_scorescrabble;
     <div class="lienAPI">
         <p>Utilisation de l'API <a href="https://www.dicolink.com/" target="_blank">Dicolink</a></p>
     </div>
-
-    <?php else :?>
-
     
     <?php endif ?>
 

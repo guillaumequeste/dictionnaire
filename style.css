@@ -7,9 +7,10 @@
 body {
     min-height: 100vh;
     margin: 0;
-    background-image: url('dictionary.jpg');
+    background-image: url('livre.jpg');
     background-size: cover;
-    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .form {
