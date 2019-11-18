@@ -46,7 +46,7 @@ $ssc = $data_scorescrabble;
     <div class="form">
         <form action="" method="post">
             <input type="text" name="search" placeholder="Rechercher un mot" class="input_search" />
-            <input type="submit" value="OK" name="btn_search"><?php if (!empty($_POST['btn_search'])): ?><span class="search">cheval</span><?php endif ?>
+            <input type="submit" value="OK" name="btn_search"><?php if (!empty($_POST['btn_search'])): ?><div class="search">cheval</div><?php endif ?>
         </form>
     </div>
 
@@ -55,52 +55,43 @@ $ssc = $data_scorescrabble;
     <div class="container">
         <div class="definitions" data-aos="fade-right">
             <h5 class="title">Définitions</h5>
-            <ul>
-                <li>dcrrvfgbb:gf blksgnfmlbnsgmlbl msglbksfk: gnb:kjfgkb nfgkjb nkfsnbkjs</li>
-                <li>fvvfveerv</li>
-                <li>ezvzver er erv zev ztb </li>
-            </ul>
+            <?php foreach ($def as $d) :?>
+                <ul>
+                    <li><?= $d->definition; ?></li>
+                </ul>
+            <?php endforeach ?>
         </div>
         <div class="citations" data-aos="fade-left">
             <h5 class="title">Citations</h5>
-            <ul>
-                <li>dbdsfb</li>
-                <li>qfvqf</li>
-                <li>dbdsfb</li>
-                <li>qfvqf</li>
-                <li>dbdsfb</li>
-            </ul>
+            <?php foreach ($cit as $c) :?>
+                <ul>
+                    <li><?= $c->citation ?> - <?= $c->auteur ?></li>
+                </ul>
+            <?php endforeach ?>
         </div>
     </div>
     <div class="expressions" data-aos="fade-up" data-aos-duration="500">
     <h5 class="title">Expressions</h5>
-       <ul>
-           <li>fv fv fv fv </li>
-           <li>fv fv fv fv </li>
-           <li>fv fv fv fv </li>
-           <li>fv fv fv fv </li>
-           <li>fv fv fv fv </li>
-       </ul>
+    <?php foreach ($exp as $e) :?>
+            <ul>
+                <li><?= $e->expression; ?> - <?= $e->semantique ?></li>
+            </ul>
+        <?php endforeach ?>
     </div>
     <div class="synonymes" data-aos="fade-up" data-aos-duration="1000">
         <h5 class="title">Synonymes</h5>
-        <ul class="ul_synonymes">
-           <li class="li_synonymes">fv fv fv fv </li>
-           <li class="li_synonymes">fv fv fv fv </li>
-           <li class="li_synonymes">fv fv fv fv </li>
-           <li class="li_synonymes">fv fv fv fv </li>
-           <li class="li_synonymes">fv fv fv fv </li>
-       </ul>
+        <?php foreach ($syn as $s) :?>
+                <?= $s->mot ?>
+            <?php endforeach ?>
     </div>
 
     <div class="lienAPI">
-        <p>Utilisation de l'API <a href="https://www.dicolink.com/">Dicolink</a></p>
+        <p>Utilisation de l'API <a href="https://www.dicolink.com/" target="_blank">Dicolink</a></p>
     </div>
 
     <?php else :?>
 
-    <h1>else</h1>
-
+    
     <?php endif ?>
 
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
