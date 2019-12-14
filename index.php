@@ -10,6 +10,8 @@ function curl_get_file_contents($URL){
     else return FALSE;
 }
 
+$_POST["search"] = trim($_POST["search"]);
+
 $definitions = 'https://api.dicolink.com/v1/mot/'.$_POST["search"].'/definitions?limite=200&api_key=F49u6WGSR1N4WV_w4Tb9vva_ENf2gc1I';
 $data_definitions = curl_get_file_contents($definitions);
 $data_definitions = json_decode($data_definitions);
